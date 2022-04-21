@@ -17,5 +17,5 @@ spec:
       - image: hello:v1
         name: myapp
         ports:
-        - containerPort: 80
+        - containerPort: 8080
  
