@@ -47,3 +47,9 @@ ENTRYPOINT ["/docker-entrypoint.sh"]
 #!/bin/bash
 /iosp/comp/privacy-api-cn/configuration/startup.sh 
 
+
+# etc.
+docker build -t jdk8u171:v1 .
+
+docker build -t tomcat8:v1 .
+docker run -ti --name hellotomcat tomcat8:v1
