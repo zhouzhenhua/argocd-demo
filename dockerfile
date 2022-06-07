@@ -21,7 +21,7 @@ ENV CLASSPATH $JAVA_HOME/lib/:$JRE_HOME/lib/
 
 # image_tomcat/Dockerfile
 ---
-FROM scheckout-jdk8u171:v1
+FROM jdk8u171:v1
 MAINTAINER rocky "zhenhua.zhou@partner.sam.com"
 
 RUN mkdir -p /iosp/comp
@@ -41,3 +41,9 @@ ENV CATALINA_HOME /iosp/tomcat-8.5.72
 ENV CATALINA_BASE /iosp/comp/privacy-api-cn
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
+
+
+ image_tomcat/docker-entrypoint.sh
+#!/bin/bash
+/iosp/comp/privacy-api-cn/configuration/startup.sh 
+
