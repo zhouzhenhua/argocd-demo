@@ -43,7 +43,7 @@ ENV CATALINA_BASE /iosp/comp/privacy-api-cn
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
 
- image_tomcat/docker-entrypoint.sh
+# image_tomcat/docker-entrypoint.sh
 #!/bin/bash
 /iosp/comp/privacy-api-cn/configuration/startup.sh 
 
